@@ -6,11 +6,40 @@
   color: #fff;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 .container {
-  width: auto;
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divsContainer {
+  width: 512px;
+  height: 512px;
+  border: 3px solid #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.divs {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ff2c2c;
+}
+
+.divs:hover{
+  background-color: rebeccapurple;
 }
 
 h1 {
-  padding: 35px;
+  padding: 10px;
   text-align: center;
 }
