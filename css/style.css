@@ -13,7 +13,6 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: auto;
   margin: 0;
 }
 
@@ -36,7 +35,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-top: 25px;
-  width: auto;
+  width: 50vw;
   height: 50vh;
   gap: 1px;
 }
