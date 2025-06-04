@@ -1,17 +1,33 @@
-const container = document.querySelector('.container');
+// Function to create the grid
+function createGrid(numSquares) {
+  const container = document.getElementById("gridContainer");
+  container.innerHTML = ""; // Clear the container
 
-const divsContainer = document.createElement('div');
-divsContainer.className = 'divsContainer';
+  const squareSize = 960 / numSquares; // Calculate the size of each square based on grid size
 
-const createDivs = function () {
-  for (let i = 1; i <= 16; i++) {
-    for (let j = 1; j <= 16; j++) {
-      const divs = document.createElement('div');
-      divs.className = 'divs'
-      divsContainer.appendChild(divs);
-    }
+  // Create the grid items
+  for (let i = 0; i < numSquares * numSquares; i++) {
+    const div = document.createElement("div");
+    div.classList.add("grid-item");
+    div.style.width = `${squareSize}px`;
+    div.style.height = `${squareSize}px`;
+    div.addEventListener('mouseenter', () => {div.classList.add("blackBG");});
+    container.appendChild(div);
   }
-};
+}
 
-createDivs();
-container.appendChild(divsContainer);
+// Event listener for the resize button
+document.getElementById("resizeButton").addEventListener("click", function() {
+  let gridSize = prompt("Enter the number of squares per side (max 100):", 16);
+
+  gridSize = parseInt(gridSize);
+  if (gridSize > 0 && gridSize <= 100) {
+      createGrid(gridSize);
+  } else {
+      alert("Please enter a valid number between 1 and 100.");
+  }
+});
+
+
+// Initialize with a 16x16 grid
+createGrid(16);
