@@ -13,11 +13,11 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: auto;
   margin: 0;
 }
 
-#resizeButton,
-#magicButton {
+#resizeButton{
   margin-top: 25px;
   margin-bottom: 20px;
   padding: 10px 20px;
@@ -28,8 +28,7 @@ body {
   border-radius: 10px;
 }
 
-#resizeButton:hover,
-#magicButton:hover {
+#resizeButton:hover {
   background-color: #333;
 }
 
